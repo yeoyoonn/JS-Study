@@ -1,6 +1,8 @@
-
 'use strict';
 import { question, questionInt } from 'readline-sync';
+// javascript에서 출력 시 %s, %d 방식 사용하지 않음 -> `${}` 방식 사용
+
+
 // 문제1
 // const firstName = question("이름을 입력하세요.\n");
 // console.log("hello" + firstName);
@@ -8,18 +10,18 @@ import { question, questionInt } from 'readline-sync';
 //문제2
 // const firstName = question("이름을 입력하세요.\n");
 // const lastName = question("성을 입력하세요.\n");
-// console.log("%s %s", firstName, lastName);
+// console.log(`${firstName}, ${lastName}`);
 
 // 문제3
 // console.log("What do you call a bear with no teeth?\nA gummy bear!");
 
 
-// 문제4
-// const firstNum = questionInt("첫번째 숫자를 입력하세요.\n");
-// const secdNum = questionInt("두번째 숫자를 입력하세요.\n");
+//문제4 Number 사용 시 문자를 입력했을 경우 에러 발생하지 않음 -> 0, 소수점 입력 시 모두 계산
+// const firstNum = Number(question("첫번째 숫자를 입력하세요.\n"));
+// const secdNum = Number(question("두번째 숫자를 입력하세요.\n"));
 // console.log('The total is %d', firstNum + secdNum);
 
-// 문제5
+// 문제5 questionInt 사용 시 "Input valid number, please." 출력, 소수점 입력 시 정수 부분만 계산
 // const firstNum = questionInt("첫번째 숫자를 입력하세요.\n");
 // const secdNum = questionInt("두번째 숫자를 입력하세요.\n");
 // const thridNum = questionInt("세번째 숫자를 입력하세요.\n");
@@ -36,7 +38,7 @@ import { question, questionInt } from 'readline-sync';
 // console.log("%s next birthday you will be %d", firstName, age);
 
 //문제8
-// const total = questionInt("총 결제 금액을 입력하세요.\n");
+// const total = Number(question("총 결제 금액을 입력하세요.\n"));
 // const count = questionInt("총 인원을 입력하세요.\n");
 // console.log("1인당 결제 금액은 %d입니다.", total/count);
 
@@ -54,6 +56,12 @@ import { question, questionInt } from 'readline-sync';
 // const remainMinute = Math.floor(remainMillonsec%3600/60)
 // const remainSec = Math.floor(remainMillonsec%3600%60)
 // console.log("%s까지 %s 시간, %s 분, %s 초 남았습니다.", date, remainHour, remainMinute, remainSec);
+// -> 문제9 수정
+// const days = Number(question("일수를 입력하세요.\n"));
+// const h = days * 24
+// const m = h * 60
+// const s = m * 60 
+// console.log(`${h}시간 또는 ${m}분 또는 ${s}초 남았습니다.`)
 
 //문제10
 // const weightKG = questionInt("몸무게(kg)를 입력하세요.\n")
@@ -63,4 +71,4 @@ import { question, questionInt } from 'readline-sync';
 //문제11
 // const num1 = questionInt("100이상 숫자를 입력하세요.\n")
 // const num2 = questionInt("10이하 숫자를 입력하세요.\n")
-// console.log("%d 안에 %d가 약 %d번 들어갑니다.", num1, num2, Math.round(num1/num2))
+// console.log(`${num1} 안에 ${num2}가 약 ${Math.round(num1/num2)}번 들어갑니다.`)
