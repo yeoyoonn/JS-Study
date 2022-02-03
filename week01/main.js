@@ -36,6 +36,21 @@ import { question, questionInt } from 'readline-sync';
 // console.log("%s next birthday you will be %d", firstName, age);
 
 //문제8
-const total = questionInt("총 결제 금액을 입력하세요.\n");
-const count = questionInt("총 인원을 입력하세요.\n");
-console.log("1인당 결제 금액은 %d입니다.", total/count);
+// const total = questionInt("총 결제 금액을 입력하세요.\n");
+// const count = questionInt("총 인원을 입력하세요.\n");
+// console.log("1인당 결제 금액은 %d입니다.", total/count);
+
+//문제9
+// 1. 특정 날짜(MM/DD/YYYY)를 입력 받는다.
+// 2. 입력 받은 날짜를 getTime() 메소드 사용하여 Millonseconds로 변경한다.
+// 3. 현재 시간을 getTime() 메소드 사용하여 Millonseconds로 변경한다.
+// 4. 2번의 값 - 3번의 값 하여 남은 Millonseconds를 구한다. 
+// 5. 4번에서 구한 값을 시간, 분, 초로 출력한다.
+const date = question("YYYY-MM-DD 형태로 미래 특정 날짜를 입력하세요.\n")
+const dateMillonsec = new Date(date).getTime()
+const nowMillonsec = new Date().getTime()
+const remainMillonsec = Math.floor((dateMillonsec - nowMillonsec)/1000)
+const remainHour = Math.floor(remainMillonsec/3600)
+const remainMinute = Math.floor(remainMillonsec%3600/60)
+const remainSec = Math.floor(remainMillonsec%3600%60)
+console.log("%s까지 %s 시간, %s 분, %s 초 남았습니다.", date, remainHour, remainMinute, remainSec);
