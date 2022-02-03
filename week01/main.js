@@ -31,7 +31,11 @@ import { question, questionInt } from 'readline-sync';
 // console.log("지금 남은 피자 조각 수는 %d입니다.", firstNum - secdNum);
 
 //문제7
-const firstName = question("이름을 입력하세요.\n");
-const age = questionInt("나이를 입력하세요.\n") + 1;
-console.log("%s next birthday you will be %d", firstName, age);
+// const firstName = question("이름을 입력하세요.\n");
+// const age = questionInt("나이를 입력하세요.\n") + 1;
+// console.log("%s next birthday you will be %d", firstName, age);
 
+//문제8
+const total = questionInt("총 결제 금액을 입력하세요.\n");
+const count = questionInt("총 인원을 입력하세요.\n");
+console.log("1인당 결제 금액은 %d입니다.", total/count);
