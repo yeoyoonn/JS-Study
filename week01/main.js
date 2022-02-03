@@ -61,6 +61,6 @@ import { question, questionInt } from 'readline-sync';
 // console.log("입력한 몸무게를 파운드로 변환하면 %d파운드입니다.", weightPD)
 
 //문제11
-const num1 = questionInt("100이상 숫자를 입력하세요.\n")
-const num2 = questionInt("10이하 숫자를 입력하세요.\n")
-console.log("%d 안에 %d가 약 %d번 들어갑니다.", num1, num2, Math.round(num1/num2))
+// const num1 = questionInt("100이상 숫자를 입력하세요.\n")
+// const num2 = questionInt("10이하 숫자를 입력하세요.\n")
+// console.log("%d 안에 %d가 약 %d번 들어갑니다.", num1, num2, Math.round(num1/num2))
