@@ -1,6 +1,6 @@
-'use strict';
-import { questionFloat } from 'readline-sync';
-import { question, questionInt } from 'readline-sync';
+// 'use strict';
+// import { questionFloat } from 'readline-sync';
+// import { question, questionInt } from 'readline-sync';
 
 // // While 45
 // let total = 0

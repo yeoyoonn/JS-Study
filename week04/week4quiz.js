@@ -20,7 +20,7 @@ import { question, questionInt } from 'readline-sync';
 // let r = question('원의 반지름을 입력하세요\n')
 // console.log(Math.PI * r**2)
 
-// //32
+//32 * 소수점 버림처리 함수 만들기!! 
 // let r = question('원기둥의 반지름을 입력하세요\n')
 // let d = question('원기둥의 깊이를 입력하세요\n')
 // console.log((r * d).toFixed(3))

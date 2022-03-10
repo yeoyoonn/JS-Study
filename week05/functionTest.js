@@ -61,3 +61,26 @@
 
 // //arry .foreach()
 
+// 드림 코딩 퀴즈 
+function calculate(command, a, b){
+    switch(command){
+        case 'add':
+            return a + b;
+
+        case 'substract':
+            return a - b;
+
+        case 'divide':
+            return a/b;
+
+        case 'mutiplay':
+            return a * b;
+
+        case 'remainder':
+            return a % b;
+
+        default:
+            console.log("wrong command")
+
+    }
+}
