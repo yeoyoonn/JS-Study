@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+</script>
+<body>
+    <input type="button" value="fetch" onclick="fetch('https://bs-portal-back-end.bngqa.npseth.cloud/api/v1/jackpot/round')
+    .then((response) =>{
+        return response.json()  
+    }) // then에서는 pending 상태 return 할 때 fullfilled 상태
+    .then((res) => {
+        alert(JSON.stringify(res));
+    })
+    .catch(error => console.error('Error', error))">
+</body>
+</html>
