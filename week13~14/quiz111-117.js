@@ -39,7 +39,7 @@ import { question } from 'readline-sync';
 // const author =  question("검색할 저자 이름을 입력하세요\n");
 // const data = fs.readFileSync('../filesystem/Books.csv').toString();
 // const arrayData = data.split('\n');
-// arrayData.forEach((value, index)=>{
+// arrayData.forEach((value)=>{
 //     const row = value.split(',');
 //     if(row[2].toLowerCase() === author.toLowerCase()){
 //         search.push(value)
@@ -55,13 +55,15 @@ import { question } from 'readline-sync';
 
 // 114
 // Books.csv 파일을 사용하며, 사용자에게 시작 년도와 끝 년도를 입력하라고 요청한다. 입력된 두 년도 사이에 출간된 모든 책을 출력하라.
-// const author =  question("검색할 저자 이름을 입력하세요\n");
+// let search = [];
+// const start =  questionInt("검색할 시작 년도를 입력하세요\n");
+// const end =  questionInt("검색할 끝 년도를 입력하세요\n");
 // const data = fs.readFileSync('../filesystem/Books.csv').toString();
 // const arrayData = data.split('\n');
-// arrayData.forEach((value, index)=>{
+// arrayData.forEach((value)=>{
 //     const row = value.split(',');
-//     if(row[2].toLowerCase() === author.toLowerCase()){
-//         search.push(value)
+//     if(Number(row[3]) >= start && Number(row[3]) <= end ){
+//         search.push(row[1])
 //     }; 
 // })
 // if (search.length === 0) {
