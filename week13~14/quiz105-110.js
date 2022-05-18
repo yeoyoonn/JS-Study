@@ -7,7 +7,7 @@ import { question } from 'readline-sync';
 // 프로그램을 실행하고 나서 이 프로그램이 저장된 위치에 해당 파일이 생성되었는지 확인한다.
 // 여러분이 윈도우 시스템을 사용하고 있다면 이 파일을 메모장에 불러와서 확인하는 게 가장 쉽게 확인하는 방법일 것이다.
 // const data = '1, 2, 3, 4, 5';
-// fs.appendFile('../filesystem/Numbers.txt', data, (err)=>{
+// fs.appendFileSync('../filesystem/Numbers.txt', data, (err)=>{
 //     if (err){
 //         console.log(err);
 //     };
@@ -19,7 +19,7 @@ import { question } from 'readline-sync';
 //         console.log(err);
 //     }
 //     console.log(data.toString());
-//     
+    
 // })
 
 
@@ -71,7 +71,7 @@ import { question } from 'readline-sync';
 //         console.log(`writter: ${written}, string:${str}`);
 //     });
 //     try{
-//         const data = fs.readFileSync('../filesystem/Names.txt'); //매개 변수를 fd 입력하면 읽지 못함??
+//         const data = fs.readSync(fd,'../filesystem/Names.txt');
 //         const stringData = data.toString();
 //         console.log(stringData);
 //     }catch(err){
@@ -149,7 +149,7 @@ import { question } from 'readline-sync';
 
 
 //질문: 
-//1. sync: sync사용한 메소드가 작업 끝나고 다음 작업 시작? 
+//1. sync: sync사용한 메소드가 작업 끝나고 다음 작업 시작? => 맞음
 //2. fs.writefile()/fs.readfile()에 fs.open() 먼저 실행되는 건지? 
 //3. flag 옵션: fs.writefile()/fs.readfile() 매개 변수에는 flag 옵션을 사용하는 경우가 있는지?
 //4. file descriptor: fs.writefile()/fs.readfile() 매개 변수에 fd 넣으면 동작하지 않음? 
