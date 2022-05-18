@@ -76,15 +76,15 @@ import {questionInt } from 'readline-sync';
 // 100번 프로그램을 사용하여 사용자에게 이름과 지역을 입력하라고 요청하고 그와 관련된 데이터를 출력한다.
 // 사용자에게 변경하려는 데이터의 이름과 지역을 사용자에게 묻고 매출 수치를 변경할 수 있도록 한다.
 // 선택한 이름에 대한 모든 지역의 매출을 출력하라.
-// let name = question("이름을 입력하세요.");
-// let region = question("지역을 이력하세요.");
-// console.log(`조회한 데이터는 ${sales[name][region]}`);
-// name = question("변경할 이름을 입력하세요.");
-// region = question("변경할 지역을 이력하세요.");
-// let sale = questionInt("변경할 매출 수치를 이력하세요.");
-// sales[name][region] = sale;
-// console.log(sales[name]);
-// console.log(`조회한 데이터는 ${JSON.stringify(slaes[name])}`); //[Object Object]로 출력됨 ${}형태는 .tostring 형태를 사용함
+let name = question("이름을 입력하세요.");
+let region = question("지역을 이력하세요.");
+console.log(`조회한 데이터는 ${sales[name][region]}`);
+name = question("변경할 이름을 입력하세요.");
+region = question("변경할 지역을 이력하세요.");
+let sale = questionInt("변경할 매출 수치를 이력하세요.");
+sales[name][region] = sale;
+console.log(sales[name]);
+console.log(`조회한 데이터는 ${JSON.stringify(slaes[name])}`); //[Object Object]로 출력됨 ${}형태는 .tostring 형태를 사용함
 
 // 102
 // 네 명의 이름과 나이, 신발 사이즈를 입력하라고 요청한다.
