@@ -44,15 +44,17 @@ import {questionInt } from 'readline-sync';
 //     row =  questionInt("행 위치(0, 1, 2, 3 중)를 입력하세요.");
 //     let arr1 = array[row];
 //     console.log(`선택한 행: ${arr1}`)
-//     let column = questionInt("열 위치(0, 1, 2 중)를 입력하세요.");
+//     column = questionInt("열 위치(0, 1, 2 중)를 입력하세요.");
 //     console.log(`선택한 행의 열 값: ${arr1[column]}`)
 // }
 // const array = [[2, 5, 8], [3, 7, 4], [1, 6, 9], [4, 2, 0]];
 // let row;
+// let column; 
 // printArray();
-// let re = question("다시 입력하시겠습니다까?(y/n)");
+// let re = question("값을 변경하시겠습니다까?(y/n)");
 // if(re === "y"){
-//     printArray();
+//      let newValue = questionInt("새로운 값을 입력하세요.");
+//      array[row][cow] = newValue;
 // }else if(re === "n"){
 //     console.log("no retry")
 // }else{
@@ -77,6 +79,12 @@ import {questionInt } from 'readline-sync';
 // let name = question("이름을 입력하세요.");
 // let region = question("지역을 이력하세요.");
 // console.log(`조회한 데이터는 ${sales[name][region]}`);
+// name = question("변경할 이름을 입력하세요.");
+// region = question("변경할 지역을 이력하세요.");
+// let sale = questionInt("변경할 매출 수치를 이력하세요.");
+// sales[name][region] = sale;
+// console.log(sales[name]);
+// console.log(`조회한 데이터는 ${JSON.stringify(slaes[name])}`); //[Object Object]로 출력됨 ${}형태는 .tostring 형태를 사용함
 
 // 102
 // 네 명의 이름과 나이, 신발 사이즈를 입력하라고 요청한다.
